@@ -7,10 +7,11 @@
     top: 0;
     z-index: 100;
     background-color: white;
+    font-size: 30px;
 }
 
 .header__logo {
-    height: 25px;
+    height: 30px;
     object-fit: contain;
     margin-left: 10px;
 }
@@ -27,6 +28,7 @@
     border-color: #fafafa;
     border-left: 1px solid lightgray;
     color: gray;
+    padding: 3px;
     cursor: pointer;
 }
 
@@ -41,4 +43,6 @@
 
 .header__center > input {
     flex: 1;
+    border: none;
+    outline: none;
 }

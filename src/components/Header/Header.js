@@ -3,10 +3,10 @@ import { AiOutlineMenu } from "@react-icons/all-files/ai/AiOutlineMenu";
 import { BsSearch } from "@react-icons/all-files/bs/BsSearch";
 import { AiFillVideoCamera } from "@react-icons/all-files/ai/AiFillVideoCamera";
 import { IoIosNotifications } from "@react-icons/all-files/io/IoIosNotifications";
-import { BiUserCircle } from "@react-icons/all-files/bi/BiUserCircle";
 import { Link } from 'react-router-dom';
 import ytlogo from '../../assets/youtube.svg';
 import './Header.css';
+import Avatar from 'react-avatar';
 
 function Header() {
   return (
@@ -30,7 +30,7 @@ function Header() {
       <div className='header__right'>
         <AiFillVideoCamera className='header__icon' />
         <IoIosNotifications className='header__icon' />
-        <BiUserCircle className='header__icon' />  
+        <Avatar src='https://avatars.githubusercontent.com/u/59795822?v=4' round={true} size={30}/>
       </div>
     </div>
   )

@@ -8,9 +8,12 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={
-            <div className="app__mainpage">
-              <Sidebar />
-            </div>
+            <>
+              <Header />
+              <div className="app__mainpage">
+                <Sidebar />
+              </div>
+            </>
           } />
         </Routes>
       </BrowserRouter>
