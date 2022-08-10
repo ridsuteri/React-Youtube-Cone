@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 import Recommended from './components/Recommended/Recommended';
+import SearchPage from './components/SearchPage/SearchPage';
+
 function App() {
   return (
     <div className="App">
@@ -13,7 +15,17 @@ function App() {
               <Header />
               <div className="app__mainpage">
                 <Sidebar />
-                <Recommended/>
+                <Recommended />
+              </div>
+            </>
+          } />
+
+          <Route path='/search/:searchQuery' element={
+            <>
+              <Header />
+              <div className="app__mainpage">
+                <Sidebar />
+                <SearchPage />
               </div>
             </>
           } />
