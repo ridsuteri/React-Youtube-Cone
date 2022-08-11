@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import VideoCard from '../VideoCard/VideoCard';
 import axios from 'axios';
-import {DateTime} from 'luxon';
+import { Link } from 'react-router-dom';
+import { DateTime } from 'luxon';
 import { AiOutlineLoading3Quarters } from "@react-icons/all-files/ai/AiOutlineLoading3Quarters"
 import { FiAlertCircle } from "@react-icons/all-files/fi/FiAlertCircle"
 import './Recommended.css';
@@ -66,14 +67,16 @@ function RecommendedVideos() {
                 {
                     videoCards.map(item => {
                         return (
-                            <VideoCard key={item.videoId}
-                                title={item.title}
-                                image={item.image}
-                                views={item.views}
-                                timestamp={item.timestamp}
-                                channel={item.channel}
-                                channelImage={item.channelImage}
-                            />
+                            <Link key={item.videoId} to={`/video/${item.videoId}`}>
+                                <VideoCard key={item.videoId}
+                                    title={item.title}
+                                    image={item.image}
+                                    views={item.views}
+                                    timestamp={item.timestamp}
+                                    channel={item.channel}
+                                    channelImage={item.channelImage}
+                                />
+                            </Link>
                         )
                     })
                 }

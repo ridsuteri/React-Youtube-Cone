@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 import Recommended from './components/Recommended/Recommended';
 import SearchPage from './components/SearchPage/SearchPage';
+import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 
 function App() {
   return (
@@ -26,6 +27,16 @@ function App() {
               <div className="app__mainpage">
                 <Sidebar />
                 <SearchPage />
+              </div>
+            </>
+          } />
+
+          <Route path='/video/:videoId' element={
+            <>
+              <Header />
+              <div className="app__mainpage">
+                <Sidebar />
+                <VideoPlayer />
               </div>
             </>
           } />

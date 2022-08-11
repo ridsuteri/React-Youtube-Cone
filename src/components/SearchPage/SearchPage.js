@@ -3,9 +3,10 @@ import "./SearchPage.css";
 import ChannelRow from './../ChannelRow/ChannelRow';
 import VideoRow from './../VideoRow/VideoRow';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { DateTime } from 'luxon';
-import {MdTune} from "@react-icons/all-files/md/MdTune";
+import { MdTune } from "@react-icons/all-files/md/MdTune";
 import { AiOutlineLoading3Quarters } from "@react-icons/all-files/ai/AiOutlineLoading3Quarters"
 import { FiAlertCircle } from "@react-icons/all-files/fi/FiAlertCircle"
 
@@ -113,14 +114,16 @@ function SearchPage(props) {
             {
                 videoRows.map(item => {
                     return (
-                        <VideoRow
-                            title={item.title}
-                            image={item.image}
-                            views={item.views}
-                            timestamp={item.timestamp}
-                            channel={item.channel}
-                            description={item.description}
-                        />
+                        <Link key={item.videoId} to={`/video/${item.videoId}`}>
+                            <VideoRow
+                                title={item.title}
+                                image={item.image}
+                                views={item.views}
+                                timestamp={item.timestamp}
+                                channel={item.channel}
+                                description={item.description}
+                            />
+                        </Link>
                     )
                 })
 
